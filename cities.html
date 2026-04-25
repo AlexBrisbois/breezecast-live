@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BreezeCast – Cities</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(160deg, #0f172a 0%, #0c2a4a 60%, #1e3a5f 100%);
+      min-height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px 80px;
+    }
+
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 500;
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      color: #00e5ff;
+      display: inline-block;
+      transform: skewX(-12deg);
+      letter-spacing: 0.04em;
+      text-shadow:
+        3px 3px 0 #00555f,
+        6px 6px 0 #002e36,
+        0 0 30px rgba(0, 229, 255, 0.45);
+      text-decoration: none;
+      transition: color 0.2s ease, text-shadow 0.2s ease;
+      margin-bottom: 8px;
+    }
+
+    .logo:hover {
+      color: #fff;
+      text-shadow:
+        3px 3px 0 #0077aa,
+        6px 6px 0 #004466,
+        0 0 50px rgba(0, 229, 255, 0.8);
+    }
+
+    .tagline {
+      font-size: 0.82rem;
+      letter-spacing: 0.3em;
+      color: rgba(0, 229, 255, 0.55);
+      text-transform: uppercase;
+      margin-bottom: 70px;
+    }
+
+    .section-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      color: rgba(255, 255, 255, 0.4);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .cities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      width: 100%;
+      max-width: 860px;
+    }
+
+    .city-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(0, 229, 255, 0.18);
+      border-radius: 14px;
+      padding: 26px 22px;
+      text-decoration: none;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .city-card:hover {
+      background: rgba(0, 229, 255, 0.07);
+      border-color: rgba(0, 229, 255, 0.5);
+      transform: translateY(-4px);
+    }
+
+    .city-icon { font-size: 2rem; flex-shrink: 0; }
+
+    .city-name {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .empty-note {
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 0.95rem;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <a class="logo" href="index.html">BreezeCast</a>
+  <p class="tagline">Weather Forecasting</p>
+  <p class="section-label">Select a City</p>
+
+  <div class="cities-grid">
+    <a class="city-card" href="dashboard_bristol.html"><span class="city-icon">🌤</span><span class="city-name">Bristol</span></a>
+    <a class="city-card" href="dashboard_london.html"><span class="city-icon">🌤</span><span class="city-name">London</span></a>
+    <a class="city-card" href="dashboard_montreal.html"><span class="city-icon">🌤</span><span class="city-name">Montreal</span></a>
+    <a class="city-card" href="dashboard_ottawa.html"><span class="city-icon">🌤</span><span class="city-name">Ottawa</span></a>
+    <a class="city-card" href="dashboard_quebec_city.html"><span class="city-icon">🌤</span><span class="city-name">Quebec City</span></a>
+    <a class="city-card" href="dashboard_sydney.html"><span class="city-icon">🌤</span><span class="city-name">Sydney</span></a>
+    <a class="city-card" href="dashboard_toronto.html"><span class="city-icon">🌤</span><span class="city-name">Toronto</span></a>
+  </div>
+</body>
+</html>
