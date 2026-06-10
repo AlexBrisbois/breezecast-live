@@ -251,7 +251,7 @@
       <div class="current-feels">Feels like 17.4°</div>
     </div>
     <div class="header-right">
-      <div class="updated">Updated Jun 09, 2026 23:10</div>
+      <div class="updated">Updated Jun 09, 2026 23:17</div>
     </div>
   </div>
 
@@ -281,7 +281,7 @@
     </div>
   </div>
 
-  <div class="footer">Breezecast &middot; Generated Jun 09, 2026 23:10</div>
+  <div class="footer">Breezecast &middot; Generated Jun 09, 2026 23:17</div>
 </div>
 
 <script>
@@ -364,6 +364,12 @@ function renderCharts() {
 // ── Init ──────────────────────────────────────────────────
 renderCards();
 renderCharts();
+
+// ── Fix Cities link for static hosting ────────────────────
+if (location.pathname.endsWith('.html')) {
+  var btn = document.querySelector('.back-btn');
+  if (btn) btn.href = 'cities.html';
+}
 </script>
 </body>
 </html>
