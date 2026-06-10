@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BreezeCast – Info</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'IBM Plex Mono', 'Courier New', monospace;
+      background: linear-gradient(160deg, #0f172a 0%, #0c2a4a 60%, #1e3a5f 100%);
+      min-height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px 80px;
+    }
+
+    .gif-header {
+      align-self: stretch;
+      height: 72px;
+      margin: 0 -20px 48px;
+      background: url('anim_lp.gif') center 30% / cover no-repeat;
+      position: relative;
+    }
+    .gif-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(15,23,42,0.25) 0%, rgba(15,23,42,0.7) 100%);
+    }
+
+    .logo {
+      font-family: 'Oxanium', sans-serif;
+      font-weight: 300;
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      color: #00e5ff;
+      letter-spacing: 0.12em;
+      text-shadow:
+        3px 3px 0 #00555f,
+        6px 6px 0 #002e36,
+        0 0 30px rgba(0, 229, 255, 0.45);
+      text-decoration: none;
+      margin-bottom: 8px;
+      transition: color 0.2s ease, text-shadow 0.2s ease;
+    }
+
+    .logo:hover {
+      color: #fff;
+      text-shadow:
+        3px 3px 0 #0077aa,
+        6px 6px 0 #004466,
+        0 0 50px rgba(0, 229, 255, 0.8);
+    }
+
+    .tagline {
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      color: rgba(0, 229, 255, 0.55);
+      text-transform: uppercase;
+      margin-bottom: 60px;
+    }
+
+    .info-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(0, 229, 255, 0.18);
+      border-radius: 14px;
+      padding: 40px 36px;
+      max-width: 680px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .info-card p {
+      font-size: 0.85rem;
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .info-card a {
+      color: #00e5ff;
+      text-decoration: none;
+    }
+
+    .info-card a:hover {
+      text-decoration: underline;
+    }
+
+    .section-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      color: rgba(255, 255, 255, 0.4);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .progress-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-left: 4px;
+    }
+
+    .progress-list li {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.5;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .progress-list li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: rgba(0, 229, 255, 0.55);
+    }
+
+    .back-link {
+      margin-top: 48px;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      color: rgba(0, 229, 255, 0.45);
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: rgba(0, 229, 255, 0.85);
+    }
+  </style>
+</head>
+<body>
+  <div class="gif-header"></div>
+  <a class="logo" href="index.html">BreezeCast</a>
+  <p class="tagline">NWP Visualization and ML Forecasting</p>
+
+  <div class="info-card">
+    <p>
+      BreezeCast has been created as a personal project to visualize multiple NWP providers
+      along themselves and to experiment with machine learning techniques in forecasting.
+    </p>
+    <p>
+      NWP for GFS, GEFS, HRRR, ECMWF-IFS-ENS, and ECMWF-AIFS has been sourced by
+      <a href="https://dynamical.org/" target="_blank">dynamical.org</a>. ECMWF-IFS-HRES has been sourced from <a href="https://www.earthmover.io/" target="_blank">Earthmover</a>.
+    </p>
+    <p>
+      <a href="https://www.linkedin.com/in/alexbrisbois/" target="_blank">Contact (My LinkedIn)</a>
+      if you have any questions or would like a certain city to be added to the list.
+    </p>
+
+    <div>
+      <p class="section-label">In progress items and projects</p>
+      <ul class="progress-list">
+        <li>Visual forecasts as GIFs (Temperature, Irradiance, Cloud Cover, Precipitation)</li>
+        <li>Standard ML Forecasts</li>
+        <li>Probabilistic Statistics</li>
+        <li>Nowcasts (ERA5/Corrected ERA5, Metered Data)</li>
+        <li>GNN architecture</li>
+        <li>Including Satellite Data</li>
+        <li>Storm Tracking</li>
+      </ul>
+    </div>
+  </div>
+
+  <a class="back-link" href="cities.html">&#8592; Back to Cities</a>
+</body>
+</html>
